@@ -1,0 +1,24 @@
+
+    <header><br>
+        <nav  class="navbar navbar-dark bg-dark navbar-fixed-top"  >
+           
+                <img src="{{ url_for('static',filename='images/utc.png')}}" length=60px width=60px  center>
+                    
+            <ul class="nav nav-pills ">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link {% if index %}active{% endif %} "><b>Home</b></a></li>
+                <li class="nav-item"><a href="{{ url_for('courses') }}" class="nav-link {% if courses %}active{% endif %}"><b>Classes</b></a></li>
+
+                {% if not session['username'] %}
+                <li class="nav-item"><a href="{{ url_for('register') }}" class="nav-link {% if register %}active{% endif %}"><b>Register</b></a></li>   
+                {% endif %}
+                <li class="nav-item"><a href="{{ url_for('enrollment') }}" class="nav-link {% if enrollment %}active{% endif %}"><b>Enrollment</b></a></li> 
+
+                {% if not session['username'] %}
+                <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}"><b>Login</b></a></li>
+                {% else %}
+                <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link"><b>Logout</b></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+       <br>
+    </header>

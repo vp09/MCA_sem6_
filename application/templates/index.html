@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1><b>Welcome to Universal Tech Academy.</b></h1>
+
+            {% if session['username'] %}
+                <h5>Start enrolling in your favourite courses and begin your learning journey with us!</h5>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}" color="red"><b>Login</b></a></p>
+            {% endif %}
+
+            <div class="jumbotron text-dark" style="text-align:left; background-color: #fff;">
+                <h2 >The Universal Tech Online Institute  </h2> 
+                
+                <p>The Universal Tech Institute is a private research university in Chicago, Illinois. Founded in 1890, the university is located on a 217-acre (88-hectare) campus in Chicago's Hyde Park neighborhood.The university has a total of 16,445 enrolled students as of Fall 2019, including 6,286 undergraduates and 10,159 graduate students. The Universal Tech Institute is ranked among the top universities in the world by major education publications.
+
+                    The university is composed of one undergraduate college and five graduate research divisions, which contain all of the university's graduate programs and interdisciplinary committees. Beyond the arts and sciences, Chicago is well known for its professional schools, which include the Pritzker School of Medicine, the Booth School of Business, the Law School, the School of Social Service Administration, the Harris School of Public Policy, the Divinity School and the Graham School of Continuing Liberal and Professional Studies, as well as the recently launched Pritzker School of Molecular Engineering. The university has additional campuses and centers in London, Paris, Beijing, Delhi, and Hong Kong, as well as in downtown Chicago.
+                    
+                    Universal Tech Institute scholars have played a major role in the development of many academic disciplines, including economics, law, literary criticism, mathematics, religion, sociology, and the behavioralism school of political science, establishing the Chicago schools in various fields.Chicago's Metallurgical Laboratory produced the world's first man-made, self-sustaining nuclear reaction in Chicago Pile-1 beneath the viewing stands of the university's Stagg Field.Advances in chemistry led to the "radiocarbon revolution" in the carbon-14 dating of ancient life and objects.The university research efforts include administration of Fermi National Accelerator Laboratory and Argonne National Laboratory, as well as the Marine Biological Laboratory. The university is also home to the Universal Tech Institute Press, the largest university press in the United States.The Barack Obama Presidential Center is expected to be housed at the university and will include both the Obama presidential library and offices of the Obama Foundation.
+                    
+                    Universal Tech Institute's students, faculty, and staff have included 100 Nobel laureates as of 2019, giving it the fourth-most affiliated Nobel laureates of any university in the world.The university's faculty members and alumni also include 54 Rhodes Scholars,26 Marshall Scholars,9 Fields Medalists,4 Turing Award winners, 52 MacArthur Fellows,27 Pulitzer Prize winners,20 National Humanities Medalists and 13 billionaire graduates.
+                </p>    
+                    
+                    
+                    
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
